@@ -1,0 +1,8 @@
+*.o
+*.dll
+*.so
+*.dylib
+*.exe
+*.pdb
+*~
+*.user

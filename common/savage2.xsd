@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 (http://www.altova.com) by Sean McNamara (N/A) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="s2launcher" targetNamespace="s2launcher" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="base">
+		<xs:annotation>
+			<xs:documentation>Savage 2 mod file list structure.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="mod" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="name" type="xs:token"/>
+							<xs:element name="description" type="xs:string"/>
+							<xs:element name="hash">
+							        <xs:simpleType>
+                                                                    <xs:restriction base="xs:token">
+                                                                        <xs:pattern value="([a-f0-9]{40})"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                        </xs:element>
+							<xs:element name="urldownload" type="xs:anyURI"/>
+							<xs:element name="urlpicture" type="xs:anyURI"/>
+							<xs:element name="bytesize" type="xs:integer"/>
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

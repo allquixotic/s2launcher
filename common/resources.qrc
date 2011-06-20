@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/files">
+        <file>savage2.xsd</file>
+    </qresource>
+</RCC>
